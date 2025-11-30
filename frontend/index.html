@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión de Inventario</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sistema de Gestión de Inventario</h1>
+            <p>Gestión completa de productos y categorías</p>
+        </header>
+
+        <nav class="tabs">
+            <button class="tab-button active" data-tab="categories">Categorías</button>
+            <button class="tab-button" data-tab="products">Productos</button>
+        </nav>
+
+        <div id="alerts" class="alerts"></div>
+
+        <!-- Sección de Categorías -->
+        <div id="categories" class="tab-content active">
+            <h2>Gestión de Categorías</h2>
+            
+            <div class="form-section">
+                <h3>Crear Nueva Categoría</h3>
+                <form id="categoryForm">
+                    <input type="hidden" id="categoryId">
+                    <div class="form-group">
+                        <label for="categoryName">Nombre de la Categoría:</label>
+                        <input type="text" id="categoryName" required>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" id="categorySubmit">Crear Categoría</button>
+                        <button type="button" id="categoryCancelEdit" style="display: none;">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="table-section">
+                <h3>Lista de Categorías</h3>
+                <table id="categoriesTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="categoriesTableBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Sección de Productos -->
+        <div id="products" class="tab-content">
+            <h2>Gestión de Productos</h2>
+            
+            <div class="form-section">
+                <h3>Crear Nuevo Producto</h3>
+                <form id="productForm">
+                    <input type="hidden" id="productId">
+                    <div class="form-group">
+                        <label for="productName">Nombre del Producto:</label>
+                        <input type="text" id="productName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="productDescription">Descripción:</label>
+                        <textarea id="productDescription"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="productPrice">Precio:</label>
+                        <input type="number" id="productPrice" step="0.01" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="productStock">Stock:</label>
+                        <input type="number" id="productStock" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="productCategory">Categoría:</label>
+                        <select id="productCategory" required>
+                            <option value="">Seleccione una categoría</option>
+                        </select>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" id="productSubmit">Crear Producto</button>
+                        <button type="button" id="productCancelEdit" style="display: none;">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="table-section">
+                <h3>Lista de Productos</h3>
+                <table id="productsTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Precio</th>
+                            <th>Stock</th>
+                            <th>Categoría</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="productsTableBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Sistema de Gestión de Inventario - Proyecto Final Pruebas de Software</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

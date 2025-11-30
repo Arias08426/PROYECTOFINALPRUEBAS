@@ -1,0 +1,15 @@
+{
+  "name": "inventory-frontend",
+  "version": "1.0.0",
+  "description": "Interfaz web para gestión de inventario",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 3001",
+    "dev": "python -m http.server 3001",
+    "start:alt": "python -m http.server 8081",
+    "start:node": "npx http-server -p 3001 -c-1"
+  },
+  "keywords": ["html", "css", "javascript", "frontend"],
+  "author": "",
+  "license": "MIT"
+}
