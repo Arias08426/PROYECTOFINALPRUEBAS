@@ -1,4 +1,4 @@
-# 🚀 Sistema de Gestión de Inventario
+# Sistema de Gestión de Inventario
 
 > **Proyecto Final Completo** - Sistema integral de gestión de inventario desarrollado con **Node.js**, **Express.js**, **SQLite** y **JavaScript vanilla**. Incluye API REST completa, interfaz web moderna, base de datos normalizada, suite de pruebas exhaustiva y pipeline CI/CD automatizado.
 
@@ -6,30 +6,30 @@
 [![Coverage Status](https://codecov.io/gh/usuario/PROYECTOFINALPRUEBAS/branch/main/graph/badge.svg)](https://codecov.io/gh/usuario/PROYECTOFINALPRUEBAS)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## 🎯 Características Principales
+## Características Principales
 
-### 🔧 Backend (API REST)
+### Backend (API REST)
 - **API REST completa** con arquitectura en capas MVC
 - **Base de datos SQLite** con relaciones normalizadas y migraciones
 - **Validación robusta** de datos con middleware personalizado
 - **Manejo de errores** centralizado con logging estructurado
 - **Documentación OpenAPI** para todos los endpoints
 
-### 🎨 Frontend (Interfaz Web)
+### Frontend (Interfaz Web)
 - **Interfaz responsiva** desarrollada en JavaScript vanilla
 - **Diseño moderno** con CSS3 y componentes reutilizables
 - **Navegación SPA** entre módulos de categorías y productos
 - **Validación en tiempo real** de formularios
 - **Feedback visual** con notificaciones y estados de carga
 
-### 🧪 Testing (Calidad Asegurada)
+### Testing (Calidad Asegurada)
 - **Pruebas unitarias** (Jest) - 6 suites, 100% cobertura crítica
 - **Pruebas de integración** (Supertest) - 9 suites, validación completa de API
 - **Pruebas E2E** (Playwright) - 12 escenarios, flujos completos de usuario
 - **Análisis estático** (ESLint) - 0 errores, 2 warnings menores
 - **Auditoría de seguridad** automatizada con reportes detallados
 
-### 🚀 DevOps (CI/CD)
+### DevOps (CI/CD)
 - **Pipeline automatizado** con GitHub Actions
 - **Ejecución paralela** de pruebas por tipo
 - **Reportes automáticos** de cobertura y calidad
@@ -38,37 +38,37 @@
 
 ---
 
-## 🏗️ Arquitectura del Sistema
+## Arquitectura del Sistema
 
 ```mermaid
 graph TB
     subgraph "Frontend Layer"
-        UI[🎨 HTML/CSS/JS Interface]
-        SPA[📱 Single Page Application]
+        UI[HTML/CSS/JS Interface]
+        SPA[Single Page Application]
     end
-    
+
     subgraph "Backend Layer"
-        API[🔌 Express.js API]
+        API[Express.js API]
         AUTH[🔒 Authentication Middleware]
         VALID[✅ Validation Layer]
     end
     
     subgraph "Business Layer"
         CTRL[🎮 Controllers]
-        SRV[⚙️ Services]
-        MDL[📦 Models]
+        SRV[Services]
+        MDL[Models]
     end
     
     subgraph "Data Layer"
-        DB[🗄️ SQLite Database]
+        DB[SQLite Database]
         MIG[📋 Migrations]
     end
     
     subgraph "Quality Assurance"
-        UNIT[🧪 Unit Tests]
-        INT[🔗 Integration Tests]
-        E2E[🎭 E2E Tests]
-        LINT[🔍 Code Analysis]
+        UNIT[Unit Tests]
+        INT[Integration Tests]
+        E2E[E2E Tests]
+        LINT[Code Analysis]
     end
     
     UI --> API
@@ -126,7 +126,7 @@ PROYECTOFINALPRUEBAS/
 └── 📄 README.md                  # 📖 Documentación principal
 ```
 
-## 🎯 Características Principales
+## Características Principales
 
 - **API REST completa** para gestión de categorías y productos
 - **Interfaz web responsiva** con HTML, CSS y JavaScript
@@ -138,7 +138,7 @@ PROYECTOFINALPRUEBAS/
 - **Pipeline CI/CD** automatizado con GitHub Actions
 - **Documentación completa** de la API
 
-## 🏗️ Arquitectura del Sistema
+## Arquitectura del Sistema
 
 ```
 PROYECTOFINALPRUEBAS/
@@ -163,7 +163,7 @@ PROYECTOFINALPRUEBAS/
 └── .github/workflows/     # Pipeline CI/CD
 ```
 
-## 🛠️ Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 ### Backend
 - **Node.js 18+** - Runtime de JavaScript
@@ -192,7 +192,7 @@ PROYECTOFINALPRUEBAS/
 - **GitHub Actions** - CI/CD automatizado
 - **Codecov** - Reporte de cobertura de código
 
-## 🚀 Instalación y Configuración
+## Instalación y Configuración
 
 ### Prerrequisitos
 - **Node.js 18.x o superior**
@@ -239,7 +239,7 @@ npx http-server -p 3001 -c-1
 
 La interfaz web estará disponible en: `http://localhost:3001`
 
-## 📡 API Endpoints
+## API Endpoints
 
 ### Categorías
 - `GET /api/categories` - Listar todas las categorías
@@ -280,7 +280,7 @@ curl -X POST http://localhost:3000/api/products \
   }'
 ```
 
-## 🗄️ Esquema de Base de Datos
+## Esquema de Base de Datos
 
 ### Tabla: categories
 | Campo | Tipo    | Restricciones           |
@@ -298,7 +298,7 @@ curl -X POST http://localhost:3000/api/products \
 | stock       | INTEGER | NOT NULL                  |
 | category_id | INTEGER | FOREIGN KEY → categories.id |
 
-## 🧪 Pruebas
+## Pruebas
 
 ### Ejecutar Todas las Pruebas
 ```bash
@@ -342,7 +342,7 @@ npm audit
 npm audit fix
 ```
 
-## 📊 Métricas de Calidad
+## Métricas de Calidad
 
 ### Objetivos de Cobertura
 - **Modelos**: 90% líneas, 85% branches
@@ -355,41 +355,41 @@ npm audit fix
 - **Longitud**: Máximo 120 caracteres por línea
 - **Funciones**: Máximo 5 parámetros, 25 statements
 
-## 🔄 Pipeline CI/CD
+## Pipeline CI/CD
 
 El pipeline de GitHub Actions incluye:
 
-### 1. **Análisis Estático** 🔍
+### 1. Análisis Estático
 - Linting con ESLint
 - Verificación de estilo de código
 - Generación de reportes
 
-### 2. **Pruebas Unitarias** 🧪
+### 2. Pruebas Unitarias
 - Ejecución de pruebas de modelos y servicios
 - Generación de cobertura de código
 - Subida a Codecov
 
-### 3. **Pruebas de Integración** 🔗
+### 3. Pruebas de Integración
 - Pruebas de API endpoints
 - Validación de base de datos
 - Pruebas de comunicación entre capas
 
-### 4. **Pruebas E2E** 🌐
+### 4. Pruebas E2E
 - Automatización de interfaz web
 - Pruebas de flujos completos
 - Screenshots en caso de error
 
-### 5. **Auditoría de Seguridad** 🔒
+### 5. Auditoría de Seguridad
 - npm audit para dependencias
 - Bandit para análisis de seguridad
 - Reportes de vulnerabilidades
 
-### 6. **Build y Deploy** 📦
+### 6. Build y Deploy
 - Empaquetado de aplicación
 - Deploy automático (en branch main)
 - Generación de artefactos
 
-## 🎨 Interfaz de Usuario
+## Interfaz de Usuario
 
 ### Características
 - **Diseño responsivo** adaptable a móviles y desktop
@@ -400,14 +400,14 @@ El pipeline de GitHub Actions incluye:
 - **Actualización en tiempo real** de tablas
 
 ### Funcionalidades
-- ✅ Crear, editar y eliminar categorías
-- ✅ Crear, editar y eliminar productos
-- ✅ Validación de formularios
-- ✅ Confirmación de eliminaciones
-- ✅ Mensajes de estado y errores
-- ✅ Interfaz intuitiva y moderna
+- Crear, editar y eliminar categorías
+- Crear, editar y eliminar productos
+- Validación de formularios
+- Confirmación de eliminaciones
+- Mensajes de estado y errores
+- Interfaz intuitiva y moderna
 
-## 📝 Scripts Disponibles
+## Scripts Disponibles
 
 ### Backend
 ```bash
@@ -430,7 +430,7 @@ npm start          # Servidor HTTP Python
 npm run dev        # Alias para start
 ```
 
-## 🔧 Configuración
+## Configuración
 
 ### Variables de Entorno
 Crear archivo `.env` en el directorio backend:
@@ -459,24 +459,24 @@ LOG_LEVEL=info
 - **Compresión habilitada**: Gzip para respuestas
 - **Rate limiting**: Protección contra spam
 
-## 🤝 Contribución
+## Contribución
 
 ### Proceso de Desarrollo
-1. **Fork** el repositorio
-2. **Crear rama** para la feature (`git checkout -b feature/nueva-funcionalidad`)
-3. **Commits descriptivos** siguiendo conventional commits
-4. **Ejecutar pruebas** y lint antes de commit
-5. **Push** a la rama (`git push origin feature/nueva-funcionalidad`)
-6. **Crear Pull Request** con descripción detallada
+1. Fork el repositorio
+2. Crear rama para la feature (`git checkout -b feature/nueva-funcionalidad`)
+3. Commits descriptivos siguiendo conventional commits
+4. Ejecutar pruebas y lint antes de commit
+5. Push a la rama (`git push origin feature/nueva-funcionalidad`)
+6. Crear Pull Request con descripción detallada
 
 ### Estándares
-- ✅ Todas las pruebas deben pasar
-- ✅ Cobertura de código >80%
-- ✅ Sin errores de ESLint
-- ✅ Documentación actualizada
-- ✅ Commits descriptivos
+- Todas las pruebas deben pasar
+- Cobertura de código >80%
+- Sin errores de ESLint
+- Documentación actualizada
+- Commits descriptivos
 
-## 🐛 Solución de Problemas
+## Solución de Problemas
 
 ### Problemas Comunes
 
@@ -527,26 +527,26 @@ HEADLESS=true npm run test:e2e
 - **Logs**: Revisar console del navegador y terminal
 - **Base de datos**: Usar herramientas SQLite para inspección
 
-## 📄 Licencia
+## Licencia
 
 Este proyecto está bajo la Licencia MIT. Ver archivo `LICENSE` para más detalles.
 
-## 👨‍💻 Autor
+## Autor
 
 **Estudiante de Pruebas de Software**  
 Proyecto Final - Sistema de Gestión de Inventario
 
 ---
 
-## 🎯 Objetivos de Aprendizaje Cumplidos
+## Objetivos de Aprendizaje Cumplidos
 
-✅ **Desarrollo de API REST** con Express.js y arquitectura en capas  
-✅ **Base de datos relacional** con SQLite y normalización  
-✅ **Interfaz de usuario** responsiva con JavaScript vanilla  
-✅ **Pruebas exhaustivas** unitarias, integración y E2E  
-✅ **Análisis estático** de código con ESLint  
-✅ **Auditoría de seguridad** con herramientas automatizadas  
-✅ **CI/CD pipeline** completo con GitHub Actions  
-✅ **Documentación técnica** completa y actualizada  
+- Desarrollo de API REST con Express.js y arquitectura en capas
+- Base de datos relacional con SQLite y normalización
+- Interfaz de usuario responsiva con JavaScript vanilla
+- Pruebas exhaustivas unitarias, integración y E2E
+- Análisis estático de código con ESLint
+- Auditoría de seguridad con herramientas automatizadas
+- CI/CD pipeline completo con GitHub Actions
+- Documentación técnica completa y actualizada
 
 Este proyecto demuestra un dominio integral de las tecnologías modernas de desarrollo web, metodologías de testing y prácticas de DevOps para la entrega continua de software de calidad.

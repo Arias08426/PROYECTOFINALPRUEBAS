@@ -56,11 +56,11 @@ async function runE2ETests() {
       waitForPort(8080)
     ]);
     
-    console.log('⏱️  Esperando inicialización completa...');
+    console.log('Esperando inicialización completa...');
     await new Promise(resolve => setTimeout(resolve, 3000));
     
     // 4. Ejecutar las pruebas
-    console.log('🧪 Ejecutando pruebas E2E...');
+    console.log('Ejecutando pruebas E2E...');
     const playwrightProcess = spawn('npx', ['playwright', 'test', '--reporter=list'], {
       stdio: 'inherit',
       shell: true
